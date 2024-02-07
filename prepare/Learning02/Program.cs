@@ -21,12 +21,8 @@ class Program
         myResume._jobs.Add(Job1);
         myResume._jobs.Add(Job2);
         myResume._name = "Allison Rose";
-        Console.WriteLine($"Name: {myResume._name}");
-        Console.WriteLine("Jobs: ");
-        foreach (Job job in myResume._jobs)
-        {
-            job.Display();
-        }
+       
+        myResume.Display();
 
         
     }
