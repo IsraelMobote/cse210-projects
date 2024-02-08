@@ -9,7 +9,7 @@ public class BreathingActivity : Activity
     }
     public void Run()
     {
-        Console.WriteLine("Breadth in...");
+        Console.Write("Breadth in...");
 
     }
 }
