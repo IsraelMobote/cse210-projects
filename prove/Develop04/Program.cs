@@ -24,6 +24,12 @@ class Program
             if (userEntryNo == 1)
             {
                 Console.Clear();
+                BreathingActivity process1 = new BreathingActivity();
+                process1.DisplayStartingMessage();
+                Console.WriteLine("Get ready ");
+                process1.ShowSpinner();
+               
+                
             }
 
             if (userEntryNo == 2)
