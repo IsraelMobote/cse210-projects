@@ -16,6 +16,8 @@ public class BreathingActivity : Activity
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
 
+        while ()
+
 
     }
 }
