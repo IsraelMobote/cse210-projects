@@ -10,6 +10,12 @@ public class BreathingActivity : Activity
     public void Run()
     {
         Console.Write("Breadth in...");
+        Console.Write("Now Breadth out...");
+        ShowCountDown(6)
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(_duration);
+
 
     }
 }
