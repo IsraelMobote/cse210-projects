@@ -23,12 +23,17 @@ public class Activity
         Console.Clear();
     }
 
+    
     public void DisplayEndingMessage()
     {
-       
+        Console.WriteLine("Well done!!");
+        ShowSpinner(1);
+
+        Console.WriteLine($"You have completed another {_duration} seconds of the {_name}.");
+        ShowSpinner(1);
     }
 
-    public void ShowSpinner()
+    public void ShowSpinner(int n)
     {
         List<string> symbols = new List<string>();
         symbols.Add("|");
@@ -41,7 +46,7 @@ public class Activity
         symbols.Add("\\");
 
         DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(10);
+        DateTime endTime = startTime.AddSeconds(8);
 
         int i = 0;
 
@@ -60,8 +65,17 @@ public class Activity
             }
         }
 
-        Console.WriteLine();
-        Console.WriteLine();
+        if (n == 1)
+        {
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+
+        else
+        {
+            Console.WriteLine();
+        }
+        
     }
 
     public void ShowCountDown(int seconds)
@@ -71,7 +85,10 @@ public class Activity
             Console.Write(i);
             Thread.Sleep(1000);
             Console.Write("\b \b");
+            
         }
+
+        Console.WriteLine();
         
     }
 }
