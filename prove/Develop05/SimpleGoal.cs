@@ -2,27 +2,34 @@ using System;
 
 public class SimpleGoal : Goal
 {
-    private bool _IsComplete;
+    private bool _isComplete;
 
     public SimpleGoal(string name, string description, int points) : base(name, description, points)
     {
-        _IsComplete = false;
+        _isComplete = false;
+    }
+    
+    public override int RecordEvent()
+    {
+        Console.WriteLine($"Congratulations You have earned {_points} points");
+        Set_isComplete();
+        return _points;
+        
     }
 
-    public override void RecordEvent()
+    public void Set_isComplete()
     {
-
+        _isComplete = true;
     }
 
     public override bool IsComplete()
     {
-        bool boll = true;
-        return boll;
+        return  _isComplete;
     }
 
     public override string GetStringRepresentation()
     {
-        string stringg = "";
-        return stringg;
+        string text = $"SimpleGoal:{_shortName},{_description},{_points},{_isComplete}";
+        return text;
     }
 }

@@ -2,9 +2,9 @@ using System;
 
 public abstract class Goal
 {
-    private string _shortName;
-    private string _description;
-    private int _points;
+    protected string _shortName;
+    protected string _description;
+    protected int _points;
 
     public Goal(string name, string description, int points)
     {
@@ -13,28 +13,41 @@ public abstract class Goal
         _points = points;
     }
 
-    public virtual void RecordEvent()
+    public abstract int RecordEvent();
+    
+    public string Get_shortName()
     {
-
+        return _shortName;
     }
 
     public virtual bool IsComplete()
     {
-        bool boll = true;
+        bool boll = false;
         return boll;
     }
 
     public virtual string GetDetailsString()
     {
-        string stringg = "";
-        return stringg;
+        bool value = IsComplete();
+        string goalDetails = "";
+
+        if (value == false)
+        {
+            goalDetails = $"[ ] {_shortName} ({_description})";
+        }
+        else if (value == true)
+        {
+            goalDetails = $"[X] {_shortName} ({_description})";
+        }
+
+        return goalDetails;
     }
 
     
     public virtual string GetStringRepresentation()
     {
-        string stringg = "";
-        return stringg;
+        string text = $"";
+        return text;
     }
  
 }

@@ -7,21 +7,16 @@ public class EternalGoal : Goal
 
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
-
-    }
-
-    public override bool IsComplete()
-    {
-        bool boll = true;
-        return boll;
+        Console.WriteLine($"Congratulations You have earned {_points} points");
+        return _points;
     }
 
     public override string GetStringRepresentation()
     {
-        string stringg = "";
-        return stringg;
+        string text = $"EternalGoal:{_shortName},{_description},{_points},False";
+        return text;
     }
 
 }
