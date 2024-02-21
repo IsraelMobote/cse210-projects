@@ -105,7 +105,7 @@ public class GoalManager
         int responseNo = int.Parse(response);
         int totalPoint = _goals[responseNo - 1].RecordEvent();
         _score = _score + totalPoint;
-        Console.WriteLine($"You now have {_score}");
+        Console.WriteLine($"You now have {_score} points");
 
         
     }
