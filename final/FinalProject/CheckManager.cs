@@ -14,7 +14,8 @@ public class CheckManager
         Console.WriteLine("   2. Print History");
         Console.WriteLine("   3. Save History");
         Console.WriteLine("   4. Load History");
-        Console.WriteLine("   5. Quit");
+        Console.WriteLine("   5. Clear History");
+        Console.WriteLine("   6. Quit");
         Console.WriteLine();
         Console.WriteLine("Please type in the number of the menu option you want to proceed! with");
         Console.Write("> ");
@@ -32,16 +33,6 @@ public class CheckManager
         Console.WriteLine("   2. FruitCheck");
         Console.WriteLine("   3. ProteinCheck");
         Console.WriteLine("   4. SaltCheck");
-    }
-
-    public void StartCheck()
-    {
-
-    }
-
-    public void GetRecordings()
-    {
-
     }
 
 

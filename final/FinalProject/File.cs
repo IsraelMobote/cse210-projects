@@ -2,18 +2,31 @@ using System;
 
 public class File
 {
-    private string _filename;
-    public File(string filename)
+    private List<string> _recordings = new List<string>();
+    public File(List<string> history)
     {
-        _filename = filename;
+        _recordings = history;
     }
 
-    public void SaveToFile()
+    public void SaveToFile(string filename)
     {
-
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+           
+            foreach (string line in _recordings)
+            {
+                outputFile.WriteLine(line);
+            }
+        }
     }
-    public void LoadFromFile()
+    public List<string> LoadFromFile(string filename)
     {
-
+        _recordings.Clear();
+        string[] lines = System.IO.File.ReadAllLines(filename);
+        foreach (string line in lines)
+        {
+            _recordings.Add(line);
+        }
+        return _recordings;
     }
 }
