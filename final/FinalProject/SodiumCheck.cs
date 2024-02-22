@@ -3,7 +3,7 @@ using System;
 public class SodiumCheck : Check
 {
     private List<int> _productMasses = new List<int>();
-    float _totalMass;
+    private float _totalMass;
  
     public SodiumCheck()
     {
